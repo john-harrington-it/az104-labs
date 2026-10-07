@@ -1,0 +1,13 @@
+{
+  "name": "az104-lab08-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal Node.js app for AZ-104 lab 08 (App Service).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,24 @@
+# Compiled ARM JSON (build output; the .bicep files are the source of truth)
+*.json
+!bicepconfig.json
+!.vscode/*.json
+!labs/08-app-service/app/package.json
+
+# Local parameter overrides and secrets: never commit these
+*.local.bicepparam
+*.local.json
+.env
+*.pem
+*.key
+id_*
+
+# App packages built during labs
+*.zip
+labs/08-app-service/app/node_modules/
+
+# Editor / OS noise
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+*.log

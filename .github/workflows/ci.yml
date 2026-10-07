@@ -1,0 +1,37 @@
+name: CI
+
+# Offline validation only: no Azure credentials, no sign-in, no deployments.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Bicep build + lint, PSScriptAnalyzer
+    runs-on: ubuntu-latest
+    env:
+      BICEP_VERSION: v0.48.1
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Bicep CLI (pinned)
+        run: |
+          curl -fsSLo bicep "https://github.com/Azure/bicep/releases/download/${BICEP_VERSION}/bicep-linux-x64"
+          chmod +x bicep
+          sudo mv bicep /usr/local/bin/bicep
+          bicep --version
+
+      - name: Install PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer -RequiredVersion 1.25.0 -Force -Scope CurrentUser
+          Get-Module PSScriptAnalyzer -ListAvailable | Select-Object Name, Version
+
+      - name: Run lab checks
+        shell: pwsh
+        run: ./scripts/Invoke-LabChecks.ps1
