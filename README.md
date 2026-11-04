@@ -22,7 +22,7 @@ Domains and weights are from the [official AZ-104 study guide](https://learn.mic
 
 | Status | Lab | Exam domain | Main skills | Rough cost* |
 |:---:|---|---|---|---|
-| ⬜ | [00 Setup and budget alert](labs/00-setup-and-budget) | Identities and governance (20-25%) | Tooling, budgets, cost alerts | $0 |
+| ✅ | [00 Setup and budget alert](labs/00-setup-and-budget) | Identities and governance (20-25%) | Tooling, budgets, cost alerts | $0 |
 | ⬜ | [01 Custom RBAC role](labs/01-rbac-custom-role) | Identities and governance (20-25%) | Entra groups, custom role, scoped assignments | $0 |
 | ⬜ | [02 Policy and locks](labs/02-policy-and-locks) | Identities and governance (20-25%) | Allowed locations, required/inherited tags, locks | $0 |
 | ⬜ | [03 Management groups and tags](labs/03-management-groups-and-tags) | Identities and governance (20-25%) | Management groups (CLI), tag merge | $0 |
