@@ -45,3 +45,4 @@ resource budget 'Microsoft.Consumption/budgets@2026-06-01' = {
 
 output budgetId string = budget.id
 // TODO: Add an output named budgetAmount (int) that returns budget.properties.amount.
+output budgetAmount int = budget.properties.amount
