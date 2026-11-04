@@ -36,13 +36,23 @@ resource budget 'Microsoft.Consumption/budgets@2026-06-01' = {
         thresholdType: 'Actual'
         contactEmails: contactEmails
       }
-      // TODO: Add a second notification named actual80 that fires at 80% of ACTUAL spend.
-      // TODO: Add a third notification named forecast100 that fires when the FORECAST reaches 100%.
-      //       Hint: thresholdType accepts 'Actual' or 'Forecasted'.
+            actual80: {
+        enabled: true
+        operator: 'GreaterThanOrEqualTo'
+        threshold: 80
+        thresholdType: 'Actual'
+        contactEmails: contactEmails
+      }
+      forecast100: {
+        enabled: true
+        operator: 'GreaterThanOrEqualTo'
+        threshold: 100
+        thresholdType: 'Forecasted'
+        contactEmails: contactEmails
+      }
     }
   }
 }
 
 output budgetId string = budget.id
-// TODO: Add an output named budgetAmount (int) that returns budget.properties.amount.
 output budgetAmount int = budget.properties.amount
