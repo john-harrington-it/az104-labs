@@ -55,4 +55,4 @@ resource budget 'Microsoft.Consumption/budgets@2026-06-01' = {
 }
 
 output budgetId string = budget.id
-output budgetAmount int = budget.properties.amount
+output budgetAmount int = amount
