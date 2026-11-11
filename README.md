@@ -28,7 +28,7 @@ Domains and weights are from the [official AZ-104 study guide](https://learn.mic
 | ⬜ | [03 Management groups and tags](labs/03-management-groups-and-tags) | Identities and governance (20-25%) | Management groups (CLI), tag merge | $0 |
 | ⬜ | [04 Storage, blobs, and Azure Files](labs/04-storage-blob-and-files) | Storage (15-20%) | SAS, stored access policy, lifecycle, soft delete, Files | < $0.05 |
 | ✅ | [05 VNet, NSGs, and ASGs](labs/05-vnet-nsg-asg) | Virtual networking (15-20%) | Subnets, NSG rules, ASGs, service endpoints | $0 |
-| ⬜ | [06 Peering and UDRs](labs/06-peering-and-udr) | Virtual networking (15-20%) | Hub-and-spoke peering, route tables | $0 |
+| ✅ | [06 Peering and UDRs](labs/06-peering-and-udr) | Virtual networking (15-20%) | Hub-and-spoke peering, route tables | $0 |
 | ⬜ | [07 Virtual machine](labs/07-virtual-machine) | Compute (20-25%) | Trusted Launch VM, data disk, extension, auto-shutdown | ~$0.02/hr |
 | ⬜ | [08 App Service](labs/08-app-service) | Compute (20-25%) | Plan, web app, TLS, managed identity, slots | $0 (S1 step ~$0.10/hr) |
 | ⬜ | [09 VM scale set + load balancer](labs/09-vmss-load-balancer) | Networking + Compute | Standard LB, probes, outbound rules, VMSS, autoscale | ~$0.05/hr |
